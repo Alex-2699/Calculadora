@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    android:background="@android:color/darker_gray"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="OPERACIONES MATEMÁTICAS"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="155dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@android:color/background_light"
+        android:hint="ingrese el numero 1"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@android:color/background_light"
+        android:hint="ingrese el numero 2"/>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btn1"
+            android:layout_toEndOf="@+id/btn1"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btn2"
+            android:layout_toEndOf="@+id/btn2"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btn3"
+            android:layout_toEndOf="@+id/btn3"
+            android:onClick="onClick"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/etiResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textColor="#ffff"
+        android:textSize="25dp"/>
+
+
+</LinearLayout>
